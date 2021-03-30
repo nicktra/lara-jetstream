@@ -26,7 +26,7 @@
                                 <form action="{{ route('todo.destroy', $todo->id) }}" method="POST" class="inline-block">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit">Delete</button>
+                                    <button type="submit" onclick="return confirm('Are you sure you want to delete this {{ $todo->todo }}?');">Delete</button>
                                 </form>
                             </td>
                         </tr>
